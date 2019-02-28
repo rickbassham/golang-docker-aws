@@ -11,3 +11,9 @@ RUN apt-add-repository 'deb https://download.docker.com/linux/debian stretch sta
 RUN apt-get update && apt-get install -y docker-ce docker-compose
 
 RUN pip install awscli --upgrade
+
+RUN curl -sL https://deb.nodesource.com/setup_11.x | bash -
+
+RUN apt-get install -y nodejs
+
+RUN rm -rf /var/lib/apt/lists/*
